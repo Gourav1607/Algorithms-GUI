@@ -19,13 +19,14 @@ class T_Graph:
     def __contains__(self, key):
         return key in self.vertices
 
-    def add_edge(self, src_key, dest_key, weight = 1):
+    def add_edge(self, src_key, dest_key, weight=1):
         if src_key not in self.vertices:
             self.add_vertex(src_key)
         if dest_key not in self.vertices:
             self.add_vertex(dest_key)
         if not self.does_edge_exist(src_key, dest_key):
-            self.vertices[src_key].add_neighbour(self.vertices[dest_key], weight)
+            self.vertices[src_key].add_neighbour(
+                self.vertices[dest_key], weight)
 
     def does_edge_exist(self, src_key, dest_key):
         return self.vertices[src_key].does_it_point_to(self.vertices[dest_key])

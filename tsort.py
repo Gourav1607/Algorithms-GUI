@@ -5,6 +5,7 @@
 
 from tsort_graph import T_Graph, T_Vertex
 
+
 class TSort:
     def __init__(self):
         self.graph = T_Graph()

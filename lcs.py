@@ -71,6 +71,7 @@ class LCS():
             elif b[i][j] is 1:
                 i = i - 1
 
-        output = output + result[::-1]  # Reverse the String and append to output
+        # Reverse the String and append to output
+        output = output + result[::-1]
 
         return output
